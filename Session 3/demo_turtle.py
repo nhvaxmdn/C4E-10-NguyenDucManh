@@ -1,23 +1,11 @@
 from turtle import *
 speed(-1)
-for i in range(7,2,-1):
-   begin_fill()
-   for j in range(i):
-       if i%6==1:
-            color("grey")     
-            forward(100)
-            left(360/i)
-       if i%5==1:
-            color("yellow")
-            forward(100)
-            left(360/i)
-       if i%3==2:
-            color("brown")
-            forward(100)
-            left(360/i)
-       if i%3==1:
-            color("blue")
-            forward(100)
-            left(360/i)
-     
-       end_fill()
+colors = ["blue","grey", "red","orange","cyon"]
+number_of_shapes = 17
+color_index = 0
+for i in range(6,2,-1):
+     color(colors[color_index % len(colors)])
+     color_index +=1
+     for j in range(i):
+        forward(100)
+        left(360/i)     
